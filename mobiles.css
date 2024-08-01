@@ -1,0 +1,178 @@
+/* mobiles.css */
+
+.mobile-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.mobile-item {
+    background: rgba(34, 34, 34, 0.9); /* Dark grey background */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure entire image fits within the container */
+    display: block;
+}
+
+.mobile-details {
+    padding: 1rem;
+    color: #CCCCCC; /* Light grey text color */
+    text-align: center;
+}
+
+.mobile-details h3 {
+    margin: 0.5rem 0;
+    color: #663399; /* Royal purple text color */
+}
+
+.mobile-details p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .mobile-gallery {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    .image-container {
+        height: 150px; /* Reduced height for smaller screens */
+    }
+}
+
+/* Display two items per row on larger screens */
+@media (min-width: 769px) {
+    .mobile-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    }
+}
+
+.feature-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust gap between feature boxes */
+    padding: 20px; /* Adjust padding around feature boxes */
+    background-color: #1a1a1a; /* Darker grey background */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px; /* Adjust margin from the section above */
+}
+
+.feature-box {
+    text-align: center;
+    color: #CCCCCC; /* Light grey text color */
+    width: 150px; /* Adjust width of each box */
+}
+
+.feature-box i {
+    font-size: 2rem; /* Adjust icon size */
+    margin-bottom: 10px; /* Add space below icon */
+}
+
+.feature-box p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .feature-section {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .feature-box {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Maximum width of each box */
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio (9 / 16 * 100) */
+    overflow: hidden;
+    background: #1a1a1a; /* Darker grey background */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.mobile-details {
+    padding: 1rem;
+    color: #CCCCCC; /* Light grey text color */
+    text-align: center;
+}
+
+.mobile-details h3 {
+    margin: 0.5rem 0;
+    color: #663399; /* Royal purple text color */
+}
+
+.feature-section {
+    display: flex;
+    justify-content: space-around; /* Space evenly between boxes */
+    gap: 20px; /* Adjust gap between feature boxes */
+    padding: 20px; /* Adjust padding around feature boxes */
+    background-color: #1a1a1a; /* Darker grey background */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px; /* Adjust margin from the section above */
+}
+
+.feature-box {
+    text-align: center;
+    color: #CCCCCC; /* Light grey text color */
+    flex: 1; /* Each box takes equal space */
+    padding: 1rem; /* Adjust padding within each box */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #333; /* Dark background for boxes */
+}
+
+.feature-box i {
+    font-size: 2rem; /* Adjust icon size */
+    margin-bottom: 10px; /* Add space below icon */
+}
+
+.feature-box p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .feature-section {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .feature-box {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Maximum width of each box */
+    }
+}
